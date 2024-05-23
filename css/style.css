@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f1f1f1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  text-align: center;
+}
+
+.container {
+  width: 50rem;
+  height: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.icon {
+  position: relative;
+  background-color: #f2f2f2;
+  width: 7rem;
+  height: 7rem;
+  border-radius: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0.2rem 1.5rem -0.4rem rgb(44, 55, 145);
+  text-decoration: none;
+  transition: all 0.25s ease;
+  overflow: hidden;
+}
+
+.icon::before {
+  content: "";
+  position: absolute;
+  top: 93%;
+  left: -80%;
+  width: 140%;
+  height: 125%;
+  background-color: rgb(179, 49, 42);
+  transition: all 0.25s ease;
+  transform: rotate(45deg);
+  border-radius: 20%;
+}
+
+.icon .fa-brands {
+  font-size: 2.5rem;
+  color: rgb(44, 55, 145);
+  transition: all 0.25s ease;
+}
+
+.icon:hover .fa-brands {
+  transform: scale(1.125);
+  color: rgb(179, 49, 42);
+}
+
+.icon:hover::before {
+  top: -93%;
+  left: 64%;
+  color: #f2f2f2;
+}
+
+.icon:hover {
+  box-shadow: 0 0.2rem 1.5rem -0.4rem rgb(179, 49, 42);
+}
